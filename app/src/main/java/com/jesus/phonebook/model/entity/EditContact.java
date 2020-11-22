@@ -1,10 +1,12 @@
 package com.jesus.phonebook.model.entity;
 
+import androidx.annotation.DrawableRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.jesus.phonebook.R;
 import com.jesus.phonebook.view.MainActivity;
 import com.jesus.phonebook.view.adapter.PhoneBookAdapter;
@@ -75,7 +78,7 @@ public class EditContact extends AppCompatActivity {
         btUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(EditContact.this, "UPDATE", Toast.LENGTH_SHORT).show();
+                Toast.makeText(EditContact.this, R.string.Update, Toast.LENGTH_SHORT).show();
                 name2 = etName2.getText().toString();
                 surname2 = etSurname2.getText().toString();
                 phone2 = etPhone2.getText().toString();
@@ -98,16 +101,28 @@ public class EditContact extends AppCompatActivity {
             }
         });
 
-
         btDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(EditContact.this, "DELETE", Toast.LENGTH_SHORT).show();
-                phoneBook.setId(id);
-                viewModel.delete(phoneBook);
-                Intent i = new Intent(EditContact.this, MainActivity.class);
-                startActivity(i);
-                finish();
+
+                MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(EditContact.this);
+                builder.setTitle(R.string.Delete);
+                builder.setMessage(R.string.Dialog);
+                builder.setIcon(android.R.drawable.ic_delete);
+                builder.setPositiveButton(R.string.OK, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(EditContact.this, R.string.Delete, Toast.LENGTH_SHORT).show();
+                        phoneBook.setId(id);
+                        viewModel.delete(phoneBook);
+                        Intent i = new Intent(EditContact.this, MainActivity.class);
+                        startActivity(i);
+                        finish();
+                    }
+                });
+                builder.setNegativeButton(R.string.cancel, null);
+                builder.show();
+
             }
         });
 
