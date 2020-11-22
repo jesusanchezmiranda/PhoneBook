@@ -123,6 +123,7 @@ public class EditContact extends AppCompatActivity {
                 builder.setNegativeButton(R.string.cancel, null);
                 builder.show();
 
+
             }
         });
 
