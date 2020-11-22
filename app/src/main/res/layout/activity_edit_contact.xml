@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".model.entity.EditContact">
+
+    <EditText
+        android:id="@+id/etName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etSurname2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etSurname2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/Surname"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etPhone2"
+        app:layout_constraintStart_toStartOf="@+id/etName2"
+        app:layout_constraintTop_toBottomOf="@+id/etName2" />
+
+    <EditText
+        android:id="@+id/etPhone2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/Phone"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/etBirthday2"
+        app:layout_constraintStart_toStartOf="@+id/etSurname2"
+        app:layout_constraintTop_toBottomOf="@+id/etSurname2" />
+
+    <EditText
+        android:id="@+id/etBirthday2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/Birthdate"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/etLocation2"
+        app:layout_constraintStart_toStartOf="@+id/etPhone2"
+        app:layout_constraintTop_toBottomOf="@+id/etPhone2" />
+
+    <EditText
+        android:id="@+id/etLocation2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/Location"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etStreet2"
+        app:layout_constraintStart_toStartOf="@+id/etBirthday2"
+        app:layout_constraintTop_toBottomOf="@+id/etBirthday2" />
+
+    <EditText
+        android:id="@+id/etStreet2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/Street"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etNumber2"
+        app:layout_constraintStart_toStartOf="@+id/etLocation2"
+        app:layout_constraintTop_toBottomOf="@+id/etLocation2" />
+
+    <EditText
+        android:id="@+id/etNumber2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/Number"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/btUpdate"
+        app:layout_constraintStart_toStartOf="@+id/etStreet2"
+        app:layout_constraintTop_toBottomOf="@+id/etStreet2" />
+
+    <Button
+        android:id="@+id/btUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btDelete"
+        app:layout_constraintTop_toBottomOf="@+id/etNumber2" />
+
+    <Button
+        android:id="@+id/btDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Delete"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btUpdate"
+        app:layout_constraintEnd_toStartOf="@+id/btUpdate"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

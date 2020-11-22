@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".model.entity.Contact">
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etSurname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/etSurname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/Surname"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etPhone"
+        app:layout_constraintStart_toStartOf="@+id/etName"
+        app:layout_constraintTop_toBottomOf="@+id/etName"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/Phone"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/etBirthday"
+        app:layout_constraintStart_toStartOf="@+id/etSurname"
+        app:layout_constraintTop_toBottomOf="@+id/etSurname"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/etBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/Birthdate"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/etLocation"
+        app:layout_constraintStart_toStartOf="@+id/etPhone"
+        app:layout_constraintTop_toBottomOf="@+id/etPhone"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/etLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/Location"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etStreet"
+        app:layout_constraintStart_toStartOf="@+id/etBirthday"
+        app:layout_constraintTop_toBottomOf="@+id/etBirthday"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/etStreet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/Street"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etNumber"
+        app:layout_constraintStart_toStartOf="@+id/etLocation"
+        app:layout_constraintTop_toBottomOf="@+id/etLocation"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/etNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/Number"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/btInsert"
+        app:layout_constraintStart_toStartOf="@+id/etStreet"
+        app:layout_constraintTop_toBottomOf="@+id/etStreet"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/btInsert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Insert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNumber" />
+</androidx.constraintlayout.widget.ConstraintLayout>

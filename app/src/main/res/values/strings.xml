@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">PhoneBook</string>
+    <string name="Name">Name</string>
+    <string name="Surname">Surname</string>
+    <string name="Phone">Phone</string>
+    <string name="Birthdate">Birthdate</string>
+    <string name="Location">Location</string>
+    <string name="Street">Street</string>
+    <string name="Number">Number</string>
+    <string name="Insert">Insert</string>
+    <string name="Update">Update</string>
+    <string name="Delete">Delete</string>
+    <string name="Updated">Updated successfully</string>
+    <string name="Deleted">Deleted successfully</string>
+    <string name="Insertcanceled">INSERT CANCELED</string>
+    <string name="Add">Add</string>
+</resources>
