@@ -34,6 +34,7 @@ public class EditContact extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_contact);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         viewModel = new ViewModelProvider(this).get(PhoneBookViewModel.class);
         init();
     }
